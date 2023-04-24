@@ -84,10 +84,3 @@ class Patient implements PatientRecord
         }
     }
 }
-
-/* $th = new Patient(23456789012);
-echo $th->get_id();
-echo $th->get_patient_name();
-print_r($th->get_insurance_records());
-$th->validate("05/21/16");
-?> */

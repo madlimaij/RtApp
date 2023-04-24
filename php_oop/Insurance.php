@@ -73,12 +73,4 @@ class Insurance implements PatientRecord
 
 }
 
-/* $th = new Insurance(15);
-echo $th->get_id() . "\n";
-echo $th->get_patient_number() . "\n";
-echo $th->get_insurance_name() . "\n";
-$valid = $th->validate("01-01-33") ? "yes":"no";
-print_r($valid . "\n"); */
-
-
 ?>

@@ -5,7 +5,7 @@ require_once "db.php";
 function letterCounter($name)
 {
     $trimmed = preg_replace('/^[a-zäöüõšž]$/', "", strtolower($name));
-    $characters = mb_str_split($trimmed); //str_split had problems with "õ", "ä" etc
+    $characters = mb_str_split($trimmed);
     $letters = array();
     foreach ($characters as $ch) {
         if (array_key_exists($ch, $letters)) {
@@ -35,7 +35,7 @@ $namesAsString = array_reduce($names, function ($acc, $curr) {
 }, "");
 
 $countedLetters = letterCounter($namesAsString);
-// // Sorting problem with non-English letters!
+// // Sorting problem with non-English letters
 ksort($countedLetters);
 $lettersTotalCount = array_sum($countedLetters);
 
