@@ -80,7 +80,8 @@ class Patient implements PatientRecord
     public function validate($date_mmddyy)
     {
         foreach ($this->insurance_records as $record) {
-            print_r($this->pn . "," . $this->first . "," . $this->last . "," . $record->get_insurance_name() . "," . ($record->validate($date_mmddyy) ? "Yes" : "No") . "\n");
+            $valid = $record->validate($date_mmddyy) ? "Yes" : "No";
+            echo "{$this->pn}, {$this->first}, {$this->last}, {$record->get_insurance_name()}, {$valid} \n";
         }
     }
 }
